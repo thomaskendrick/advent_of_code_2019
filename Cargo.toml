@@ -1,8 +1,8 @@
 [package]
-name = "Advent_Of_Code_Solutions_Rust"
+name = "Advent_Of_Code_2019_Solutions_Rust"
 version = "0.1.0"
 authors = ["Thomas Kendrick"]
-edition = "2019"
+edition = "2018"
 
 [dependencies]
 aoc-runner = "*"
