@@ -1,6 +1,6 @@
 # Advent of Code 2019 - Thomas Kendrick
 
-My attempt at Advent of Code 2019 in Rust. Thanks to [Grégory Obanos](https://github.com/gobanos) for the [cargo-aoc runner] crate (https://github.com/gobanos/cargo-aoc) used to make running and benchmarking solutions straightforward so I can focus on the implementation.
+My attempt at Advent of Code 2019 in Rust. Thanks to [Grégory Obanos](https://github.com/gobanos) for the [cargo-aoc runner](https://github.com/gobanos/cargo-aoc) crate used to make running and benchmarking solutions straightforward so I can focus on the implementation.
 
 ## Setup instructions
 
