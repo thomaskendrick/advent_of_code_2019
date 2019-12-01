@@ -42,7 +42,7 @@ fn calculate_additional_fuel(base_fuel: i32) -> i32 {
 }
 
 #[cfg(test)]
-mod part_1_tests{
+mod part1{
     use super::*;
     #[test]
     fn test_example_1(){
@@ -63,5 +63,28 @@ mod part_1_tests{
     fn test_example_4(){
         let result = calculate_fuel_requirement(100756);
         assert_eq!(result, 33583);
+    }
+}
+
+#[cfg(test)]
+mod part2{
+    use super::*;
+    #[test]
+    fn test_example_1(){
+        let base_fuel = 2;
+        let result = base_fuel + calculate_additional_fuel(base_fuel);
+        assert_eq!(result, 2);
+    }
+    #[test]
+    fn test_example_2(){
+        let base_fuel = 654;
+        let result = base_fuel + calculate_additional_fuel(base_fuel);
+        assert_eq!(result, 966);
+    }
+    #[test]
+    fn test_example_3(){
+        let base_fuel = 33583;
+        let result = base_fuel + calculate_additional_fuel(base_fuel);
+        assert_eq!(result, 50346);
     }
 }
