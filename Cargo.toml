@@ -1,5 +1,5 @@
 [package]
-name = "Advent_Of_Code_2019_Solutions_Rust"
+name = "advent_of_code_2019_solutions_rust"
 version = "0.1.0"
 authors = ["Thomas Kendrick"]
 edition = "2018"
@@ -7,3 +7,4 @@ edition = "2018"
 [dependencies]
 aoc-runner = "*"
 aoc-runner-derive = "*"
+libmath = "*"
