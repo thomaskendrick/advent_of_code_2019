@@ -15,7 +15,7 @@ fn solve_part_1(input: &Vec<usize>) -> usize {
 
 #[aoc(day2, part2)]
 fn solve_part_2(input: &Vec<usize>) -> usize {
-    let mut result = 0;
+    let mut result: Option<usize> = None;
     for verb in 0..99 {
         for noun in 0..99 {
             let mut input = input.clone();
@@ -23,11 +23,13 @@ fn solve_part_2(input: &Vec<usize>) -> usize {
             input[2] = verb;
             let output = process_code(input);
             if output[0] == 19690720 {
-                result = 100 * noun + verb;
+                result = Some(100 * noun + verb);
+                break;
             }
+            if result.is_some(){break;}
         }
     }
-    return result;
+    return result.expect("Couldn't find value!");
 }
 
 fn process_code(mut code: Vec<usize>) -> Vec<usize> {
