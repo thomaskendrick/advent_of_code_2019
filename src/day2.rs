@@ -24,7 +24,7 @@ fn solve_part_2(input: &Vec<usize>) -> usize {
             input[2] = verb;
             let output = process_code(input);
             if output[0] == 19690720 {
-                result = (verb + noun) * 100;
+                result = 100 * noun + verb ;
             }
         }
     }
