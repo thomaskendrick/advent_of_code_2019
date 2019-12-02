@@ -15,16 +15,15 @@ fn solve_part_1(input: &Vec<usize>) -> usize {
 
 #[aoc(day2, part2)]
 fn solve_part_2(input: &Vec<usize>) -> usize {
-
     let mut result = 0;
     for verb in 0..99 {
         for noun in 0..99 {
             let mut input = input.clone();
-            input[1] = noun; 
+            input[1] = noun;
             input[2] = verb;
             let output = process_code(input);
             if output[0] == 19690720 {
-                result = 100 * noun + verb ;
+                result = 100 * noun + verb;
             }
         }
     }
@@ -36,15 +35,15 @@ fn process_code(mut code: Vec<usize>) -> Vec<usize> {
     loop {
         match code[i] {
             1 => {
-                let target = code[i+3];
-                code[target] = code[code[i+1]]+ code[code[i+2]]
-            },
+                let target = code[i + 3];
+                code[target] = code[code[i + 1]] + code[code[i + 2]]
+            }
             2 => {
-                let target = code[i+3];
-                code[target] = code[code[i+1]] * code[code[i+2]];
+                let target = code[i + 3];
+                code[target] = code[code[i + 1]] * code[code[i + 2]];
             }
             99 => break,
-            _ => panic!("Something went wrong")
+            _ => panic!("Something went wrong"),
         }
         i += 4;
     }
