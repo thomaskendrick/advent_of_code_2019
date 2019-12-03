@@ -26,7 +26,9 @@ fn solve_part_2(input: &Vec<usize>) -> usize {
                 result = Some(100 * noun + verb);
                 break;
             }
-            if result.is_some(){break;}
+            if result.is_some() {
+                break;
+            }
         }
     }
     return result.expect("Couldn't find value!");
